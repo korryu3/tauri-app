@@ -69,7 +69,7 @@ async fn set_system_prompt(main_topic: String) {
         {main_topic}",
         main_topic=main_topic
     );
-
+    
     // スレッドセーフでグローバル変数(SYSTEM_PROMPT)を編集する
     thread::spawn(move || {
         let mut system_prompt = SYSTEM_PROMPT.lock().unwrap();
